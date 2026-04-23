@@ -211,33 +211,41 @@
       mobileMenu.classList.toggle("active");
     });
   const searchInput = document.getElementById("searchInput");
+
   let allProducts = [];
+  let filteredProducts = []; // 🔥 important
   let currentPage = 1;
   const itemsPerPage = 8;
 
   async function loadProducts() {
     const res = await fetch("assignment.json");
     allProducts = await res.json();
-    displayProducts(allProducts);
+
+    filteredProducts = allProducts; // initial
+
+    displayProducts();
     setupPagination();
   }
 
-  function displayProducts(products) {
+  function displayProducts() {
     const container = document.getElementById("product-container");
     container.innerHTML = "";
+
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
-    const paginatedItems = products.slice(start, end);
+
+    const paginatedItems = filteredProducts.slice(start, end);
+
     if (paginatedItems.length === 0) {
       container.innerHTML = "<p class='w-full text-center text-gray-500'>No products found</p>";
       return;
     }
-    
+
     paginatedItems.forEach(product => {
       const card = document.createElement("div");
 
       card.className =
-        "card p-2 w-[45%] sm:w-[45%] md:w-[30%] lg:w-[22%] bg-white shadow-xl m-2 rounded-xl";
+        "p-2 w-[45%] sm:w-[45%] md:w-[30%] lg:w-[22%] bg-white shadow-xl m-2 rounded-xl";
 
       card.innerHTML = `
         <img class="w-full h-[150px] object-cover rounded-lg" src="${product.image}">
@@ -263,50 +271,12 @@
       container.appendChild(card);
     });
   }
-  function filterCourses() {
-    const searchValue = searchInput.value.toLowerCase();
 
-    let filtered = allProducts.filter(p =>
-      p.course.toLowerCase() === searchValue
-    );
-    displayProducts(filtered);
- }
-
-    
-
-  // Search event
-  searchInput.addEventListener("input", filterCourses);
-  // Button Click Filter
-  const buttons = document.querySelectorAll(".filter-btn");
-
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const course = btn.getAttribute("data-course");
-
-      // Active button style
-      buttons.forEach(b => {
-        b.classList.remove("bg-blue-600", "text-white");
-        b.classList.add("bg-gray-200");
-      });
-
-      btn.classList.add("bg-blue-600", "text-white");
-      btn.classList.remove("bg-gray-200");
-
-      // Filter logic
-      if (course === "all") {
-        displayProducts(allProducts);
-      } else {
-        const filtered = allProducts.filter(p => p.course === course);
-        displayProducts(filtered);
-      }
-    });
-  });
-  
   function setupPagination() {
     const pagination = document.getElementById("pagination");
     pagination.innerHTML = "";
 
-    const pageCount = Math.ceil(allProducts.length / itemsPerPage);
+    const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);
 
     for (let i = 1; i <= pageCount; i++) {
       const btn = document.createElement("button");
@@ -327,8 +297,49 @@
       pagination.appendChild(btn);
     }
   }
-  
-  
+
+  // 🔍 SEARCH FIX (use includes, not ===)
+  function filterProducts() {
+    const searchValue = searchInput.value.toLowerCase();
+
+    filteredProducts = allProducts.filter(p =>
+      p.name.toLowerCase().includes(searchValue) ||
+      p.course.toLowerCase().includes(searchValue)
+    );
+
+    currentPage = 1; // 🔥 reset page
+    displayProducts();
+    setupPagination();
+  }
+
+  searchInput.addEventListener("input", filterProducts);
+
+  // 🎯 BUTTON FILTER FIX
+  const buttons = document.querySelectorAll(".filter-btn");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const course = btn.dataset.course;
+
+      buttons.forEach(b => {
+        b.classList.remove("bg-blue-600", "text-white");
+        b.classList.add("bg-gray-200");
+      });
+
+      btn.classList.add("bg-blue-600", "text-white");
+      btn.classList.remove("bg-gray-200");
+
+      if (course === "all") {
+        filteredProducts = allProducts;
+      } else {
+        filteredProducts = allProducts.filter(p => p.course === course);
+      }
+
+      currentPage = 1; // 🔥 important
+      displayProducts();
+      setupPagination();
+    });
+  });
 
   loadProducts();
 </script>

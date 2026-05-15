@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - IGNOU Study Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .mobile-menu{
+      position: relative;
+      left: -100%;
+      height: 0;
+      transition: all 0.5s ease;
+      
+    }
+    .mobile-menu.active{
+      left: 0;
+      height: auto;
+      transition: all 0.5s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="shadow-md fixed w-[100%] bg-white z-[10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- Logo -->
+        <div class="text-2xl font-bold">
+          <img class="w-[120px]" src="../logo.png">
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+          <a href="assignment.html" class="hover:text-yellow-300 transition">Assignment</a>
+          <a href="Project.html" class="hover:text-yellow-300 transition">Project & Synopsis</a>
+          <a href="#" class="hover:text-yellow-300 transition">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-slate-900 text-white">
+      <a href="index.html" class="block px-4 py-3 hover:bg-blue-800">Home</a>
+      <a href="assignment.html" class="block px-4 py-3 hover:bg-blue-800">Assignments</a>
+      <a href="Project.html" class="block px-4 py-3 hover:bg-blue-800">Project & Synopsis</a>
+      <a href="#" class="block px-4 py-3 hover:bg-blue-800">Contact</a>
+    </div>
+  </nav>
+  <!-- Hero -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <span class="inline-block bg-blue-100 text-blue-700 px-5 py-2 rounded-full text-sm font-semibold mb-5">
+        IGNOU Student Resources
+      </span>
+
+      <h2 class="text-5xl md:text-6xl font-extrabold text-[#022B6D] leading-tight mb-6">
+        IGNOU Study Store Blog
+      </h2>
+
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Explore assignment tips, project guidance, exam preparation strategies, IGNOU updates, synopsis help, and important student resources.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="pb-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap gap-4 justify-center">
+
+      <button class="bg-[#0D5BFF] text-white px-6 py-3 rounded-full font-semibold shadow-md">
+        All Blogs
+      </button>
+
+      <button class="bg-white hover:bg-blue-50 px-6 py-3 rounded-full font-semibold shadow-sm transition">
+        Assignments
+      </button>
+
+      <button class="bg-white hover:bg-blue-50 px-6 py-3 rounded-full font-semibold shadow-sm transition">
+        Projects
+      </button>
+
+      <button class="bg-white hover:bg-blue-50 px-6 py-3 rounded-full font-semibold shadow-sm transition">
+        Guess Papers
+      </button>
+
+      <button class="bg-white hover:bg-blue-50 px-6 py-3 rounded-full font-semibold shadow-sm transition">
+        IGNOU Updates
+      </button>
+
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="pb-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Blog Card 1 -->
+        <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+            alt="IGNOU Assignments"
+            class="w-full h-64 object-cover"
+          >
+
+          <div class="p-7">
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
+              Assignments
+            </span>
+
+            <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+              How to Write IGNOU Assignments Properly in 2026
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Learn the correct format, presentation style, and important tips for preparing IGNOU assignments.
+            </p>
+
+            <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop"
+            alt="IGNOU Projects"
+            class="w-full h-64 object-cover"
+          >
+
+          <div class="p-7">
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+              Projects
+            </span>
+
+            <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+              Complete IGNOU MCA Project & Synopsis Guide
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Step-by-step guidance for creating IGNOU MCA projects and synopsis approval.
+            </p>
+
+            <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+            alt="Guess Papers"
+            class="w-full h-64 object-cover"
+          >
+
+          <div class="p-7">
+            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold">
+              Guess Papers
+            </span>
+
+            <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+              Best IGNOU Guess Papers for Exam Preparation
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Discover important questions and updated guess papers for better scoring.
+            </p>
+
+            <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Card 4 -->
+        <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"
+            alt="Exam Tips"
+            class="w-full h-64 object-cover"
+          >
+
+          <div class="p-7">
+            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">
+              Exam Tips
+            </span>
+
+            <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+              Top IGNOU Exam Preparation Tips for Students
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Smart preparation methods to improve exam performance and confidence.
+            </p>
+
+            <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Card 5 -->
+        <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop"
+            alt="IGNOU Updates"
+            class="w-full h-64 object-cover"
+          >
+
+          <div class="p-7">
+            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">
+              Updates
+            </span>
+
+            <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+              Latest IGNOU Assignment Submission Updates
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Stay updated with assignment submission dates and important notices.
+            </p>
+
+            <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Card 6 -->
+        <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1200&auto=format&fit=crop"
+            alt="Study Tips"
+            class="w-full h-64 object-cover"
+          >
+
+          <div class="p-7">
+            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">
+              Study Tips
+            </span>
+
+            <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+              Best Study Strategy for IGNOU Distance Learning
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Effective study planning and time management strategies for IGNOU students.
+            </p>
+
+            <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <!-- <div class="flex items-center justify-center gap-4 mt-16">
+        <button class="w-12 h-12 rounded-full bg-[#0D5BFF] text-white font-bold shadow-md">
+          1
+        </button>
+
+        <button class="w-12 h-12 rounded-full bg-white hover:bg-blue-50 font-bold shadow-sm transition">
+          2
+        </button>
+
+        <button class="w-12 h-12 rounded-full bg-white hover:bg-blue-50 font-bold shadow-sm transition">
+          3
+        </button>
+      </div> -->
+
+    </div>
+  </section>
+
+  <footer class="bg-slate-900 text-gray-300 pt-14 pb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Top Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- Brand -->
+      <div>
+        <h2 class="text-2xl font-bold text-white">IGNOU Study Store</h2>
+        <p class="mt-4 text-sm leading-7 text-gray-400">
+          Your trusted platform for IGNOU books, solved assignments, projects,
+          previous year papers, and exam support.
+        </p>
+
+        <div class="flex gap-4 mt-6">
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-pink-600 transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-sky-500 transition">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-green-500 transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-5">Quick Links</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+          <li><a href="#" class="hover:text-blue-400 transition">Study Material</a></li>
+          <li><a href="#" class="hover:text-blue-400 transition">Solved Assignments</a></li>
+          <li><a href="#" class="hover:text-blue-400 transition">Projects</a></li>
+          <li><a href="#" class="hover:text-blue-400 transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Popular Courses -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-5">Popular Courses</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-blue-400 transition">BCA</a></li>
+          <li><a href="#" class="hover:text-blue-400 transition">MCA</a></li>
+          <li><a href="#" class="hover:text-blue-400 transition">B.Com</a></li>
+          <li><a href="#" class="hover:text-blue-400 transition">MBA</a></li>
+          <li><a href="#" class="hover:text-blue-400 transition">BA / MA</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-5">Contact</h3>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt mt-1 text-blue-400"></i>
+            <span>Ambedkar Nagar,R.N. College Road, Hajipur, Bihar, India</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-phone-alt text-blue-400"></i>
+            <span>+91 7541886112</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-envelope text-blue-400"></i>
+            <span>support@ignoustudystore.com</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-slate-700 mt-12 pt-6">
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <p>
+          © 2026 IGNOU Study Store. All rights reserved.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-5">
+          <a href="#" class="hover:text-blue-400 transition">Privacy Policy</a>
+          <a href="#" class="hover:text-blue-400 transition">Terms & Conditions</a>
+          <a href="#" class="hover:text-blue-400 transition">Refund Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  
+    const mobileMenu = document.getElementById("mobile-menu");
+    const faqButtons = document.querySelectorAll(".faq-btn");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+</script>
+</body>
+</html>

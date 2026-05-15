@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>IGNOU Study Store</title>
+<meta name="description" content="IGNOU Study Store provides solved assignments, MCA projects, synopsis, guess papers, study materials, and academic support for IGNOU students with latest updated solutions and proper formatting." />
+  <meta name="Keywords"content="IGNOU solved assignments, IGNOU MCA project, IGNOU synopsis, IGNOU guess papers, IGNOU study material, IGNOU assignment help, MCA solved assignments, IGNOU project report, IGNOU student support, IGNOU notes, IGNOU assignment solution 2026, IGNOU project guidance, IGNOU PDF assignments, IGNOU academic support, IGNOU Study Store" />
+
+  <meta name="robots" content="index, follow" />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -23,6 +30,9 @@
       transition: all 0.5s ease;
       
     }
+    html{
+      overflow-x: hidden;
+    }
     .mobile-menu.active{
       left: 0;
       height: auto;
@@ -31,6 +41,14 @@
     .hero{
       background: linear-gradient(135deg, #f4f8ff 0%, #e8f1ff 50%, #dcebff 100%);
     }
+    .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   </style>
   </head>
   <body>
@@ -48,6 +66,7 @@
           <a href="#" class="hover:text-yellow-300 transition">Home</a>
           <a href="assignment.html" class="hover:text-yellow-300 transition">Assignment</a>
           <a href="Project.html" class="hover:text-yellow-300 transition">Project & Synopsis</a>
+          <a href="blog/index.html" class="hover:text-yellow-300 transition">Blog</a>
           <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
         </div>
 
@@ -67,13 +86,21 @@
       <a href="#" class="block px-4 py-3 hover:bg-blue-800">Home</a>
       <a href="assignment.html" class="block px-4 py-3 hover:bg-blue-800">Assignments</a>
       <a href="Project.html" class="block px-4 py-3 hover:bg-blue-800">Project & Synopsis</a>
+      <a href="blog/index.html" class="hover:text-yellow-300 transition">Blog</a>
       <a href="contact.html" class="block px-4 py-3 hover:bg-blue-800">Contact</a>
     </div>
   </nav>
-   <div  class="flex items-center bg-white notification w-[100vw] mx-auto p-2 relative top-[70px] mb-[20px]">
+   <div  class="flex items-center bg-white notification w-[100vw] mx-auto p-2 relative top-[70px]">
     <div class="flex justify-between items-center bg-black p-2 rounded-lg  text-white"><i class="fa fa-bell mr-[5px] text-yellow-400"></i> Notice </span>
       </div>
-            <marquee style="display:inline-block">IGNOU JULY 2026 RE-REGISTRATION STARTED</marquee>
+            <marquee style="display:inline-block"><div class="flex">
+              <a href="#" class="mr-4 text-red-700 font-bold">IGNOU JULY 2026 RE-REGISTRATION STARTED</a>
+              <a href="#" class="mr-4 text-red-700 font-bold">BCA Project and synopsis Guide</a>
+              <a href="#" class="mr-4 text-red-700 font-bold">IGNOU 2026-27 Assignment released </a>
+              <a href="#" class="mr-4 text-red-700 font-bold">IGNOU JULY 2026 RE-REGISTRATION STARTED</a>
+              <a href="#" class="mr-4 text-red-700 font-bold">BCA Project and synopsis Guide</a>
+              <a href="#" class="mr-4 text-red-700 font-bold">IGNOU 2026-27 Assignment released</a>
+            </div></marquee>
 
   </div> 
   <section class="w-full hero-bg overflow-hidden">
@@ -161,13 +188,13 @@
           <!-- BUTTONS -->
           <div class="flex flex-col sm:flex-row gap-4 mt-10">
 
-            <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-blue-200 transition">
+            <a href="#home" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-blue-200 transition">
               Explore Services
-            </button>
+            </a>
 
-            <button class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold transition">
+            <a href="#why" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold transition">
               Why Choose Us?
-            </button>
+            </a>
 
           </div>
 
@@ -269,7 +296,7 @@
 
   <h2 class="text-xl text-center font-black animate__animated animate__bounce"> Explore Our IGNOU Assignment Services</h2>
   <div class="w-[80vw] h-[4px] bg-blue-600 mx-auto rounded my-2" ></div>
-  <div class="grid grid-cols-2 md:grid-cols-5 p-4 max-w-[100vw]">
+  <div class="grid grid-cols-2 md:grid-cols-6 p-4 max-w-[100vw]">
     <div class="item">
       <div class="rect rounded-xl ">
         <img src="images/solved-assignment.png" class="m-auto w-[100px] md:w-[250px]">
@@ -298,50 +325,58 @@
       <div class="rect rounded-xl ml-2">
 <img src="images/project.png" class="m-auto w-[100px] md:w-[250px]">
       </div>
-      <a class="text-sm font-black p-2 text-center">IGNOU Project & Synopsis</a>
+    
+      <a class="block text-sm font-black p-2 text-center">IGNOU Project & Synopsis</a>
+    </div>
+    <div class="item">
+      <div class="rect rounded-xl ml-2">
+<img src="images/project.png" class="m-auto w-[100px] md:w-[250px]">
+      </div>
+    
+      <a class="block text-sm font-black p-2 text-center">IGNOU Admission & Re-Registration Support</a>
     </div>
   </div>
 </section>
-<section class="p-4 bg-slate-950">
-  <h2 class="text-center font-black text-white text-3xl md:text-4xl mb-4">
-   Trusted <span class="text-blue-700">IGNOU Assignment Service</span> in India: Why Students Choose Us?
+<section id="why" class="p-4 bg-stone-50">
+  <h2 class="text-center font-black text-3xl md:text-4xl mb-4">
+   Trusted <span class="text-blue-800">IGNOU Assignment Service</span> in India: Why Students Choose Us?
   </h2>
   
   <div class="flex flex-wrap max-w-[100vw] justify-center">
-    <div class="card p-4 max-w-[40vw] rounded-xl  text-white shadow-[0_0_5px_white] m-2">
-      <h5 class="font-bold text-sm md:text-2xl text-blue-500">✅100% Verified & High-Quality Solutions</h5>
+    <div class="card p-4 max-w-[40vw] rounded-xl shadow-[0_0_5px_gray] m-2">
+      <h5 class="font-bold text-sm md:text-2xl text-blue-900">✅ 100% Verified & High-Quality Solutions</h5>
       <p class="text-[10px] md:text-xl">
-        Our assignments are prepared by subject experts following the latest IGNOU guidelines. Every answer is well-structured, relevant, and designed to help you score better.
+        Hamare assignments latest IGNOU guidelines ke according prepare kiye jate hain. Har answer simple language, proper format aur exam-oriented style me hota hai jisse students ko better understanding aur achhe marks mil sake.
       </p>
     </div>
-    <div class="card p-4 max-w-[40vw] rounded-xl text-white shadow-[0_0_5px_white] m-2">
-      <h5 class="font-bold text-sm md:text-2xl text-blue-500">📚 Updated As Per Latest Session</h5>
+    <div class="card p-4 max-w-[40vw] rounded-xl shadow-[0_0_5px_gray] m-2">
+      <h5 class="font-bold text-sm md:text-2xl text-blue-900">✅ Updated As Per Latest Session</h5>
       <p class="text-[10px] md:text-xl">
-        We provide fully updated assignments for the current session, ensuring you never face rejection due to outdated content.
+        Hum current session ke according updated assignments provide karte hain, taaki aapko outdated content ya rejection ka issue face na karna pade.
       </p>
     </div>
-        <div class="card p-4 max-w-[40vw] rounded-xl text-white shadow-[0_0_5px_white] m-2">
-      <h5 class="font-bold text-sm md:text-2xl text-blue-500">🚀 Fast Delivery</h5>
+        <div class="card p-4 max-w-[40vw] rounded-xl shadow-[0_0_5px_gray] m-2">
+      <h5 class="font-bold text-sm md:text-2xl text-blue-900">🚀 Fast Delivery</h5>
       <p class="text-[10px] md:text-xl">
-        No more last-minute stress. Get your assignments instantly or within hours, so you can submit on time without panic.
+        Last moment tension lene ki zarurat nahi! Assignments ko fast processing ke sath provide kiya jata hai taaki students time par submission complete kar saken.
       </p>
     </div>
-        <div class="card p-4 max-w-[40vw] rounded-xl text-white shadow-[0_0_5px_white] m-2">
-      <h5 class="font-bold text-sm md:text-2xl text-blue-500">🧠Error-Free Content</h5>
+        <div class="card p-4 max-w-[40vw] rounded-xl shadow-[0_0_5px_gray] m-2">
+      <h5 class="font-bold text-sm md:text-2xl text-blue-900">🧠 Error-Free Content</h5>
       <p class="text-[10px] md:text-xl">
-        We focus on clarity and accuracy. Our solutions are concise, well-written, and easy to learn — perfect for exams as well.
+        Content ko properly check karke prepare kiya jata hai. Answers easy-to-understand, well-structured aur student-friendly hote hain — exams preparation me bhi helpful.
       </p>
     </div>
-        <div class="card p-4 max-w-[40vw] rounded-xl text-white shadow-[0_0_5px_white] m-2">
-      <h5 class="font-bold text-sm md:text-2xl text-blue-500">📱 Personal Support & Guidance</h5>
+        <div class="card p-4 max-w-[40vw] rounded-xl shadow-[0_0_5px_gray] m-2">
+      <h5 class="font-bold text-sm md:text-2xl text-blue-900"> 📲 Personal Support & Guidance</h5>
       <p class="text-[10px] md:text-xl">
-Stuck somewhere? Our team provides continuous support via WhatsApp and call, helping you with doubts, submission, and more.
+        Agar kisi student ko assignment, submission ya subject selection me issue hota hai, to hamari support team WhatsApp ke through proper guidance provide karti hai.
       </p>
     </div>
-        <div class="card p-4 max-w-[40vw] rounded-xl text-white shadow-[0_0_5px_white] m-2">
-      <h5 class="font-bold text-sm md:text-2xl text-blue-500">🛡️Trusted by Thousands of Students</h5>
+        <div class="card p-4 max-w-[40vw] rounded-xl shadow-[0_0_5px_gray] m-2">
+      <h5 class="font-bold text-sm md:text-2xl text-blue-900">🛡️ Trusted by Thousands of Students</h5>
       <p class="text-[10px] md:text-xl">
-        We’ve helped students from BCA, MCA, BA, B.Com, MBA, and more successfully complete their assignments with confidence.
+       Different IGNOU programmes ke bahut saare students hamari services use kar chuke hain aur academic support ke liye trust karte hain.
       </p>
     </div>
 
@@ -352,57 +387,208 @@ Stuck somewhere? Our team provides continuous support via WhatsApp and call, hel
   <div class="grid grid-cols-2 md:grid-cols-6 max-w-[100vw] ">
     <div class="card p-2 bg-white shadow-xl m-2">
        <img src="images/MCA.png">
-       <p class="font-bold text-[16px]">MCA IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignement/mca-assignment.html" class="font-bold text-[16px]">MCA IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20MCA%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
         <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/ba-assignment.png">
-       <p class="font-bold text-[16px]">BA IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/BA-assignment.html" class="font-bold text-[16px]">BA IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20BA%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
         <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/Bsc-assignment.png">
-       <p class="font-bold text-[16px]">B.Sc. IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/Bsc-assignment.html" class="font-bold text-[16px]">B.Sc. IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20BSc%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
         <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/Bcom-assignment.png">
-       <p class="font-bold text-[16px]">B.Com. IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/bcom-assignment.html" class="font-bold text-[16px]">B.Com. IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20BCom%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
     <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/bba-assignment.png">
-       <p class="font-bold text-[16px]">BBA IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/bba-assignment.html" class="font-bold text-[16px]">BBA IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20BBA%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
     <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/mba-assignment.png">
-       <p class="font-bold text-[16px]">MBA IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/mba-assignment.html" class="font-bold text-[16px]">MBA IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20MBA%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
     <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/ma-assignment.png">
-       <p class="font-bold text-[16px]">MA IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/ma-assignment.html" class="font-bold text-[16px]">MA IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20MA%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
     <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/mcom-assignment.png">
-       <p class="font-bold text-[16px]">M.Com. IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/mcom-assignment.html" class="font-bold text-[16px]">M.Com. IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20MCom%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
     <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/Msc-assignment.png">
-       <p class="font-bold text-[16px]">M.Sc. IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/msc-assignment.html" class="font-bold text-[16px]">M.Sc. IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20MSc%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
   
     <div class="card p-2 max-w-[40vw] bg-white shadow-xl m-2">
        <img src="images/BCA-aasignment.png">
-       <p class="font-bold text-[16px]">BCA IGNOU Solved Assignments 2026-27  PDF</p>
-       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="#">Buy Now</a></div>
+       <a href="assignment/bca-assignment.html" class="font-bold text-[16px]">BCA IGNOU Solved Assignments 2026-27  PDF</a>
+       <div class="flex justify-between"><p class="md:text-xl"><s class="text-gray-500">₹199</s> ₹99</p> <a class="bg-blue-500 p-1 text-white rounded font-bold text-[10px] md:text-lg" href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20BCA%20Solved%20Assignments" target="_blank">Buy Now</a></div>
     </div>
   </div>
 </section>
+
+<!-- Testimonial Section -->
+<section class="py-20 bg-[#F4F8FF] overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+
+      <span class="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        Student Reviews
+      </span>
+
+      <h2 class="text-5xl font-extrabold text-[#022B6D] mb-5">
+        Trusted by IGNOU Students
+      </h2>
+
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Real feedback and screenshots shared by students who received assignments, projects, synopsis, and study support.
+      </p>
+
+    </div>
+
+    <!-- Slider -->
+    <div class="relative">
+
+      <div id="testimonialSlider"
+           class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 no-scrollbar">
+
+        <!-- Screenshot Card -->
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-1.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+
+        <!-- Screenshot Card -->
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-2.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+
+        <!-- Screenshot Card -->
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-3.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+
+        <!-- Screenshot Card -->
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-4.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-5.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-6.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-7.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-8.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-9.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+
+        </div>
+        <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-[30px] shadow-xl p-4 snap-center">
+
+          <img
+            src="images/wa-10.jpeg"
+            alt="WhatsApp Review"
+            class="w-full h-[600px] object-cover rounded-[25px]"
+          >
+        </div>
+      </div>
+      <!-- Buttons -->
+      <div class="flex items-center justify-center gap-5 mt-10">
+
+        <button
+          onclick="scrollSlider(-1)"
+          class="w-14 h-14 rounded-full bg-white shadow-lg hover:bg-blue-50 text-2xl font-bold text-[#022B6D] transition"
+        >
+          ←
+        </button>
+
+        <button
+          onclick="scrollSlider(1)"
+          class="w-14 h-14 rounded-full bg-[#0D5BFF] shadow-lg hover:bg-blue-700 text-2xl font-bold text-white transition"
+        >
+          →
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <section class="py-16 bg-gray-50">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     
@@ -471,7 +657,7 @@ Stuck somewhere? Our team provides continuous support via WhatsApp and call, hel
         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
           <p class="py-4 text-gray-600 leading-7">
             Digital products are delivered instantly or within a few hours.
-            Physical books usually arrive within 3–7 working days.
+            Physical books usually arrive within 10–15 working days.
           </p>
         </div>
       </div>
@@ -498,6 +684,120 @@ Stuck somewhere? Our team provides continuous support via WhatsApp and call, hel
     </div>
   </div>
 </section>
+<!-- Blog Section -->
+<section class="bg-[#F4F8FF] py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-14">
+      <span class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        Latest Articles
+      </span>
+
+      <h2 class="text-5xl font-extrabold text-[#022B6D] mb-5">
+        IGNOU Study Store Blog
+      </h2>
+
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Explore assignment tips, IGNOU updates, project guidance, exam preparation strategies, and helpful study resources for students.
+      </p>
+    </div>
+
+    <!-- Blog Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Blog Card -->
+      <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+          alt="IGNOU Assignment Tips"
+          class="w-full h-64 object-cover"
+        >
+
+        <div class="p-7">
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
+            Assignments
+          </span>
+
+          <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+            How to Write IGNOU Assignments Properly in 2026
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Learn the correct format, presentation style, and important tips to prepare high-quality IGNOU assignments.
+          </p>
+
+          <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+            Read More →
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Card -->
+      <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+          src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop"
+          alt="IGNOU Project Guide"
+          class="w-full h-64 object-cover"
+        >
+
+        <div class="p-7">
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+            Projects
+          </span>
+
+          <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+            Complete IGNOU MCA Project & Synopsis Guide
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Step-by-step guidance for creating IGNOU MCA projects, synopsis approval, and report submission.
+          </p>
+
+          <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+            Read More →
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Card -->
+      <div class="bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+          alt="IGNOU Guess Papers"
+          class="w-full h-64 object-cover"
+        >
+
+        <div class="p-7">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold">
+            Guess Papers
+          </span>
+
+          <h3 class="text-2xl font-bold text-[#022B6D] mt-5 mb-4 leading-snug">
+            Best IGNOU Guess Papers for Exam Preparation
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Discover important questions, exam preparation tips, and updated guess papers for better scoring.
+          </p>
+
+          <a href="#" class="text-[#0D5BFF] font-semibold hover:underline">
+            Read More →
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <div class="text-center mt-14">
+      <a href="#" class="inline-block bg-[#0D5BFF] hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg transition">
+        View All Blogs
+      </a>
+    </div>
+
+  </div>
+</section>
 <!-- Footer -->
 <footer class="bg-slate-900 text-gray-300 pt-14 pb-6">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -521,9 +821,9 @@ Stuck somewhere? Our team provides continuous support via WhatsApp and call, hel
             <i class="fab fa-instagram"></i>
           </a>
           <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-sky-500 transition">
-            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-telegram text-xl"></i>
           </a>
-          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-green-500 transition">
+          <a href="https://wa.me/917541886112?text=Hi%20I%20want%20to%20know%20about%20your%20services" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-green-500 transition">
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
@@ -592,6 +892,18 @@ Stuck somewhere? Our team provides continuous support via WhatsApp and call, hel
     </div>
   </div>
 </footer>
+<a href="https://wa.me/917541886112?text=Hi%20I%20want%20to%20know%20about%20your%20services"
+   target="_blank"
+   class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-2xl transition transform hover:scale-105">
+
+  <!-- Icon -->
+  <i class="fab fa-whatsapp text-xl lg:text-4xl">
+
+  <!-- Text -->
+  <span class="hidden sm:block font-semibold">
+    Chat on WhatsApp
+  </span>
+</a>
 
 <!-- Font Awesome -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
@@ -631,6 +943,33 @@ Stuck somewhere? Our team provides continuous support via WhatsApp and call, hel
       }
     });
   });
+
+       const slider = document.getElementById('testimonialSlider');
+
+  function scrollSlider(direction) {
+    slider.scrollBy({
+      left: direction * 380,
+      behavior: 'smooth'
+    });
+  }
+
+  // Auto Slide
+  setInterval(() => {
+    slider.scrollBy({
+      left: 380,
+      behavior: 'smooth'
+    });
+
+    if (
+      slider.scrollLeft + slider.clientWidth >=
+      slider.scrollWidth - 10
+    ) {
+      slider.scrollTo({
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }, 3000);
 </script>
 </body>
 </html>

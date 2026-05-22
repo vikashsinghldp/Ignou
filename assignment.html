@@ -45,6 +45,7 @@
           <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
           <a href="#" class="hover:text-yellow-300 transition">Assignments</a>
           <a href="Project.html" class="hover:text-yellow-300 transition">Project & Synopsis</a>
+          <a href="blog/index.html" class="hover:text-yellow-300 transition">Blog</a>
           <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
         </div>
 
@@ -64,6 +65,7 @@
       <a href="index.html" class="block px-4 py-3 hover:bg-blue-800">Home</a>
       <a href="assignment.html" class="block px-4 py-3 hover:bg-blue-800">Assignments</a>
       <a href="Project.html" class="block px-4 py-3 hover:bg-blue-800">Project & Synopsis</a>
+      <a href="blog/index.html" class="hover:text-yellow-300 transition">Blog</a>
       <a href="contact.html" class="block px-4 py-3 hover:bg-blue-800">Contact</a>
     </div>
   </nav>
@@ -97,7 +99,7 @@
     MBA
   </button>
   </div>
-  <div id="product-container" class="flex flex-wrap max-w-[100vw]">
+  <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
 
   </div>
   <div id="pagination" class="flex justify-center mt-6 gap-2 flex-wrap"></div>
@@ -245,14 +247,14 @@
       const card = document.createElement("div");
 
       card.className =
-        "p-2 w-[45%] sm:w-[45%] md:w-[30%] lg:w-[22%] bg-white shadow-xl m-2 rounded-xl";
+        "p-2 bg-white shadow-xl m-2 rounded-xl";
 
       card.innerHTML = `
-        <img class="w-full h-[150px] object-cover rounded-lg" src="${product.image}">
+        <img class="rounded-lg" src="${product.image}">
         
-        <p class="font-bold text-[14px] md:text-[16px] mt-2 line-clamp-2">
+        <a href="${product.link}" class="font-bold text-[14px] md:text-[16px] mt-2 line-clamp-2">
           ${product.name}
-        </p>
+        </a>
 
         <p class="text-sm text-gray-500">${product.course}</p>
 
@@ -262,7 +264,7 @@
             <span class="text-green-600 font-bold ml-1">${product.offer_price}</span>
           </p>
 
-          <a href="#" class="bg-blue-500 px-2 py-1 text-white rounded text-[12px] font-semibold hover:bg-blue-600">
+          <a href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20MCom%20Solved%20Assignments" class="bg-blue-500 px-2 py-1 text-white rounded text-[12px] font-semibold hover:bg-blue-600">
             Buy Now
           </a>
         </div>

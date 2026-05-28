@@ -7,9 +7,9 @@
 {"id":7, "name": "MAAN Synopsis & Project","link": "#", "course": "MAAN", "image": "images/projects/MAAN.png", "price": "₹6499","offer_price": "₹4000"},
 {"id":8, "name": "MAEOH & PGDEOH Synopsis & Project","link": "#", "course": "MA", "image": "images/projects/MAEOH.png", "price": "₹6499","offer_price": "₹4000"},
 {"id":9, "name": "MAPC Synopsis & Project","link": "#", "course": "MA", "image": "images/projects/MAPC.png", "price": "₹6499","offer_price": "₹4000"},
-{"id":10, "name": "MARD Synopsis & Project", "course": "MA", "image": "images/projects/MARD.png", "price": "₹6499","offer_price": "₹4000"},
-{"id":11, "name": "MCA Synopsis & Project", "course": "MCA", "image": "images/projects/MCA.png", "price": "₹6499","offer_price": "₹4000"},
-{"id":12, "name": "MA(Education) Synopsis & Project", "course": "MA", "image": "images/projects/MAE.png", "price": "₹6499","offer_price": "₹4000"},
-{"id":13, "name": "MLIS Synopsis & Project", "course": "MLIS", "image": "images/projects/MLIS.png", "price": "₹6499","offer_price": "₹4000"},
-{"id":14, "name": "MJMC Synopsis & Project", "course": "MJMC", "image": "images/projects/MJMC.png", "price": "₹6499","offer_price": "₹4000"}
+{"id":10, "name": "MARD Synopsis & Project","link": "#", "course": "MA", "image": "images/projects/MARD.png", "price": "₹6499","offer_price": "₹4000"},
+{"id":11, "name": "MCA Synopsis & Project","link": "#", "course": "MCA", "image": "images/projects/MCA.png", "price": "₹6499","offer_price": "₹4000"},
+{"id":12, "name": "MA(Education) Synopsis & Project","link": "#", "course": "MA", "image": "images/projects/MAE.png", "price": "₹6499","offer_price": "₹4000"},
+{"id":13, "name": "MLIS Synopsis & Project","link": "#", "course": "MLIS", "image": "images/projects/MLIS.png", "price": "₹6499","offer_price": "₹4000"},
+{"id":14, "name": "MJMC Synopsis & Project","link": "#", "course": "MJMC", "image": "images/projects/MJMC.png", "price": "₹6499","offer_price": "₹4000"}
  ]

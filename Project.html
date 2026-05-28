@@ -31,7 +31,7 @@
   </style>
   </head>
   <body>
-<nav class="shadow-md fixed w-[100%] bg-white">
+  <nav class="shadow-md fixed w-[100%] bg-white z-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         
@@ -43,8 +43,9 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-6">
           <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
-          <a href="assignment.html" class="hover:text-yellow-300 transition">Assignment</a>
+          <a href="assignment.html" class="hover:text-yellow-300 transition">Assignments</a>
           <a href="Project.html" class="hover:text-yellow-300 transition">Project & Synopsis</a>
+          <a href="blog/index.html" class="hover:text-yellow-300 transition">Blog</a>
           <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
         </div>
 
@@ -64,15 +65,44 @@
       <a href="index.html" class="block px-4 py-3 hover:bg-blue-800">Home</a>
       <a href="assignment.html" class="block px-4 py-3 hover:bg-blue-800">Assignments</a>
       <a href="Project.html" class="block px-4 py-3 hover:bg-blue-800">Project & Synopsis</a>
+      <a href="blog/index.html" class="hover:text-yellow-300 transition">Blog</a>
       <a href="contact.html" class="block px-4 py-3 hover:bg-blue-800">Contact</a>
     </div>
   </nav>
 
-<section class="p-4 mb-15" style="position:relative; top:60px; z-index: -1;">
-  <h2 class="text-gray-950 text-3xl font-bold text-center">Synopsis & Project Report</h2>
-  <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
+<section class="p-4 relative top-[60px] mb-15">
+  <h2 class="text-gray-950 text-3xl font-bold text-center">IGNOU Synopsis & Project</h2>
+  <div class="max-w-7xl mx-auto px-4 my-6 flex flex-wrap gap-3 justify-center">
+    <input 
+      type="text" 
+      id="searchInput"
+      placeholder="Search course (e.g. BCA, MBA...)"
+      class="w-full sm:w-[300px] border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+
+
+  <button data-course="all"
+    class="filter-btn active bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+    All
+  </button>
+<button data-course="BCA"
+    class="filter-btn bg-gray-200 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-500 hover:text-white">
+    BCA
+  </button>
+
+  <button data-course="B.Com."
+    class="filter-btn bg-gray-200 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-500 hover:text-white">
+    BCOM
+  </button>
+<button data-course="MBA"
+    class="filter-btn bg-gray-200 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-500 hover:text-white">
+    MBA
+  </button>
+  </div>
+  <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
 
   </div>
+  <div id="pagination" class="flex justify-center mt-6 gap-2 flex-wrap"></div>
 </section>
 <!-- Footer -->
 <footer class="bg-slate-900 text-gray-300 pt-14 pb-6">
@@ -159,9 +189,9 @@
         </p>
 
         <div class="flex flex-wrap justify-center gap-5">
-          <a href="#" class="hover:text-blue-400 transition">Privacy Policy</a>
-          <a href="#" class="hover:text-blue-400 transition">Terms & Conditions</a>
-          <a href="#" class="hover:text-blue-400 transition">Refund Policy</a>
+          <a href="privacy-policy.html" class="hover:text-blue-400 transition">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="hover:text-blue-400 transition">Terms & Conditions</a>
+          <a href="refund-policy.html" class="hover:text-blue-400 transition">Refund Policy</a>
         </div>
       </div>
 
@@ -182,47 +212,136 @@
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("active");
     });
+  const searchInput = document.getElementById("searchInput");
+
+  let allProducts = [];
+  let filteredProducts = []; // 🔥 important
+  let currentPage = 1;
+  const itemsPerPage = 12;
+
   async function loadProducts() {
-    try {
-      const res = await fetch("project.json");
-      const products = await res.json();
+    const res = await fetch("project.json");
+    allProducts = await res.json();
 
-      const container = document.getElementById("product-container");
+    filteredProducts = allProducts; // initial
 
-      products.forEach(product => {
-        const card = document.createElement("div");
+    displayProducts();
+    setupPagination();
+  }
 
-        card.className =
-          "card p-2 w-[45%] sm:w-[45%] md:w-[30%] lg:w-[22%] bg-white shadow-xl m-2 rounded-xl";
+  function displayProducts() {
+    const container = document.getElementById("product-container");
+    container.innerHTML = "";
 
-        card.innerHTML = `
-          <img class="rounded" src="${product.image}" alt="${product.name}">
-          
-          <p class="font-bold text-[14px] md:text-[16px] mt-2 line-clamp-2">
-            ${product.name}
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+
+    const paginatedItems = filteredProducts.slice(start, end);
+
+    if (paginatedItems.length === 0) {
+      container.innerHTML = "<p class='w-full text-center text-gray-500'>No products found</p>";
+      return;
+    }
+
+    paginatedItems.forEach(product => {
+      const card = document.createElement("div");
+
+      card.className =
+        "p-2 bg-white shadow-xl m-2 rounded-xl";
+
+      card.innerHTML = `
+        <img class="rounded-lg" src="${product.image}">
+        
+        <a href="${product.link}" class="font-bold text-[14px] md:text-[16px] mt-2 line-clamp-2">
+          ${product.name}
+        </a>
+
+        <p class="text-sm text-gray-500">${product.course}</p>
+
+        <div class="flex justify-between items-center mt-2">
+          <p class="text-sm">
+            <s class="text-gray-400">${product.price}</s>
+            <span class="text-green-600 font-bold ml-1">${product.offer_price}</span>
           </p>
 
-          <p class="text-sm text-gray-500">${product.course}</p>
+          <a href="https://wa.me/917541886112?text=Hello%20I%20want%20to%20buy%20IGNOU%20Project%20and%20Synopsis" class="bg-blue-500 px-2 py-1 text-white rounded text-[12px] font-semibold hover:bg-blue-600">
+            Buy Now
+          </a>
+        </div>
+      `;
 
-          <div class="flex justify-between items-center mt-2">
-            <p class="text-sm">
-              <s class="text-gray-400">${product.price}</s>
-              <span class="text-green-600 font-bold ml-1">${product.offer_price}</span>
-            </p>
+      container.appendChild(card);
+    });
+  }
 
-            <a href="https://wa.me/916204529785?text=Hello%20I%20want%20IGNOU%20Project%20details" 
-  target="_blank" class="bg-blue-500 px-2 py-1 text-white rounded text-[12px] font-semibold hover:bg-blue-600">
-              Buy Now
-            </a>
-          </div>
-        `;
+  function setupPagination() {
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML = "";
 
-        container.appendChild(card);
+    const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);
+
+    for (let i = 1; i <= pageCount; i++) {
+      const btn = document.createElement("button");
+
+      btn.innerText = i;
+      btn.className =
+        "px-3 py-1 rounded border " +
+        (i === currentPage
+          ? "bg-blue-600 text-white"
+          : "bg-gray-200 hover:bg-blue-500 hover:text-white");
+
+      btn.addEventListener("click", () => {
+        currentPage = i;
+        displayProducts();
+        setupPagination();
       });
-    } catch (error) {
-      console.error("Error loading products:", error);
+
+      pagination.appendChild(btn);
     }
   }
+
+  // 🔍 SEARCH FIX (use includes, not ===)
+  function filterProducts() {
+    const searchValue = searchInput.value.toLowerCase();
+
+    filteredProducts = allProducts.filter(p =>
+      p.name.toLowerCase().includes(searchValue) ||
+      p.course.toLowerCase().includes(searchValue)
+    );
+
+    currentPage = 1; // 🔥 reset page
+    displayProducts();
+    setupPagination();
+  }
+
+  searchInput.addEventListener("input", filterProducts);
+
+  // 🎯 BUTTON FILTER FIX
+  const buttons = document.querySelectorAll(".filter-btn");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const course = btn.dataset.course;
+
+      buttons.forEach(b => {
+        b.classList.remove("bg-blue-600", "text-white");
+        b.classList.add("bg-gray-200");
+      });
+
+      btn.classList.add("bg-blue-600", "text-white");
+      btn.classList.remove("bg-gray-200");
+
+      if (course === "all") {
+        filteredProducts = allProducts;
+      } else {
+        filteredProducts = allProducts.filter(p => p.course === course);
+      }
+
+      currentPage = 1; // 🔥 important
+      displayProducts();
+      setupPagination();
+    });
+  });
 
   loadProducts();
 </script>
